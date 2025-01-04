@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Cars - Quality Rentals and Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #252422;
+            background-color: #fffcf2;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Header Section */
+        .header {
+            width: 100%;
+        }
+        .top-bar {
+            background-color: #ccc5b9;
+            color: #403d39;
+            font-size: 14px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contact-info span {
+            margin-left: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #fffcf2;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            width: 120px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links li {
+            display: inline-block;
+        }
+        .nav-links a {
+            font-weight: bold;
+            font-size: 16px;
+            color: #252422;
+        }
+        .search-icon i {
+            font-size: 18px;
+            cursor: pointer;
+            color: #252422;
+        }
+        /* Hero Section */
+        .hero {
+            background-image: url('https://i.ibb.co/gdpy7kr/P90370702-rolls-royce-motor-cars-moscow-launches-wraith-black-and-bright-collection-599px.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #fffcf2;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(37, 36, 34, 0.6);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fffcf2;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ccc5b9;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #81CB38; /* Updated to green */
+            color: #fffcf2;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #403d39;
+        }
+      
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                display: none;
+            }
+            .navbar {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        /* Rental Section Styling */
+        .rental-section {
+            text-align: center;
+            background-color: #fffcf2;
+            padding: 50px 20px;
+            color: #403d39;
+        }
+        .rental-section h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #252422;
+        }
+        .rental-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .rental-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .rental-card {
+            background-color: #fff;
+            border: 1px solid #ccc5b9;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 300px;
+        }
+        .rental-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .rental-card h3 {
+            margin: 15px 0;
+            font-size: 18px;
+            color: #81CB38; /* Updated to green */
+        }
+        .rental-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Footer Styling */
+        .footer {
+            background-color: #252422;
+            color: #ccc5b9;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AJ Cars</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="top-bar">
+            <p>Nationwide rental service with 24/7 customer support.</p>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +251 11 661 0000</span>
+                <span><i class="fa fa-map-marker"></i> Bole Infront of Harmony Hotel.</span>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://i.ibb.co/7zgF8mm/517402-19749882-3602823-fc903b51-image-removebg-preview.png" alt="AJ Cars Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="search-icon">
+                <i class="fa fa-search"></i>
+            </div>
+        </nav>
+    </header> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Cars - Hero Sections</title>
+    <style>
+        /* General Hero Section Styles */
+        .hero {
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #fffcf2;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(37, 36, 34, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fffcf2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ccc5b9;
+        }
+
+        /* Hero Section Backgrounds */
+        .hero.welcome {
+            background-image: url('https://i.ibb.co/whrNLhh/New-2024-Rolls-Royce-Spectre-1716478941.jpg');
+        }
+
+        .hero.story {
+            background-image: url('https://i.ibb.co/7z0NN9w/360-F-563924724-a-EHki-SNLm-AS91-O99wp-F38-Ah5n-SOhj3s3.jpg');
+        }
+
+        .hero.choose {
+            background-image: url('https://i.ibb.co/hBcRNnQ/1-lamborghini-huracan-evo-rwd-2020-uk-fd-hero-front.webp');
+        }
+
+        .hero.mission {
+            background-image: url('https://i.ibb.co/gdpy7kr/P90370702-rolls-royce-motor-cars-moscow-launches-wraith-black-and-bright-collection-599px.jpg');
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 10px 20px;
+            background-color: #81CB38; /* Updated to green */
+            color: #fffcf2;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #403d39;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Section -->
+    <section class="hero welcome">
+        <div class="hero-content">
+            <h1>Welcome to AJ Cars</h1>
+            <p>At AJ Cars, we provide top-quality car rental services to meet all your transportation needs. Whether you’re traveling for business, pleasure, or a special event, we offer a wide range of vehicles that fit your style and budget. Our team is committed to providing exceptional customer service to ensure your experience is smooth and hassle-free.</p>
+        </div>
+    </section> 
+  .
+    <p>.</p>
+    .
+    <!-- Our Story Section -->
+    <section class="hero story">
+        <div class="hero-content">
+            <h1>Our Story</h1>
+            <p>Founded with a vision to offer reliable, high-end rental vehicles, AJ Cars has grown into one of the most trusted car rental services in the region. We believe in offering only the best to our customers, and our fleet of vehicles is always maintained to the highest standards. We take pride in our fleet and are always striving to deliver an exceptional driving experience for each of our customers.</p>
+        </div>
+    </section> 
+  .
+    <p>.</p>
+    .
+    <!-- Why Choose AJ Cars Section -->
+    <section class="hero choose">
+        <div class="hero-content">
+            <h1>Why Choose AJ Cars?</h1>
+            <ul>
+                <li>Wide selection of vehicles, including luxury cars, SUVs, and economy options.</li>
+                <li>24/7 customer support for any assistance you may need.</li>
+                <li>Affordable and transparent pricing with no hidden fees.</li>
+                <li>Free delivery and pick-up service available.</li>
+            </ul>
+        </div>
+    </section> 
+  .
+    <p>.</p>
+    .
+    <!-- Our Mission Section -->
+    <section class="hero mission">
+        <div class="hero-content">
+            <h1>Our Mission</h1>
+            <p>Our mission is to provide safe, reliable, and affordable transportation for everyone. Whether you're in need of a car for a weekend getaway or a corporate event, AJ Cars is here to make your journey a memorable one.</p>
+        </div>
+    </section>
+
+</body>
+</html>
+ 
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Cars - Client Testimonials</title>
+    <style>
+        /* Client Section Styling */
+        .client-section {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+        }
+
+        .client-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .client-container h2 {
+            font-size: 36px;
+            color: #81CB38; /* Green color */
+            margin-bottom: 40px;
+        }
+
+        .testimonial {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+
+        .testimonial-item p {
+            font-size: 18px;
+            color: #403d39;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .testimonial-item h3 {
+            font-size: 20px;
+            color: #252422;
+            margin-bottom: 5px;
+        }
+
+        .client-title {
+            font-size: 16px;
+            color: #81CB38; /* Green color for title */
+            font-weight: bold;
+        }
+
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            .testimonial {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .testimonial-item {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Client Section -->
+    <section class="client-section">
+        <div class="client-container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
+                <div class="testimonial-item">
+                    <p>"AJ Cars provided the best car rental experience I’ve had. The car was in perfect condition, and the customer service was excellent!"</p>
+                    <h3>- John Doe</h3>
+                    <p class="client-title">Business Executive</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Renting a car from AJ Cars was seamless and stress-free. I would definitely recommend them to anyone looking for reliable rentals."</p>
+                    <h3>- Sarah Smith</h3>
+                    <p class="client-title">Travel Blogger</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"I was blown away by the selection of vehicles and the professionalism of the team. I’ll be coming back for all my future rentals!"</p>
+                    <h3>- Michael Johnson</h3>
+                    <p class="client-title">Entrepreneur</p>
+                </div>
+                <!-- Added 4th Client -->
+                <div class="testimonial-item">
+                    <p>"AJ Cars made my business trip so much easier. Their fleet is top-notch and the booking process was quick and efficient!"</p>
+                    <h3>- Emily Williams</h3>
+                    <p class="client-title">Corporate Executive</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+    <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section company-info">
+      <img src="https://i.ibb.co/7zgF8mm/517402-19749882-3602823-fc903b51-image-removebg-preview.png" alt="AJ Cars Logo" class="footer-logo">
+      <p>We are dedicated to providing you with the best car rental experience possible.</p>
+      <ul class="contact-info">
+        <li><i class="fa fa-phone"></i> +251 11 661 0000</li>
+        <li><i class="fa fa-envelope"></i> info@ajcarrent.com</li>
+        <li><i class="fa fa-globe"></i> www.ajcarrent.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-section car-services">
+      <h4>Our Car Rental Services</h4>
+      <ul>
+        <li><a href="#">Sedan Car Rentals</a></li>
+        <li><a href="#">Luxury Car Rentals</a></li>
+        <li><a href="#">SUV Car Rentals</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section additional-services">
+      <h4>Additional Services</h4>
+      <ul>
+        <li><a href="#">AJ Car Rental</a></li>
+      </ul>
+    </div>
+
+     <div class="footer-section follow-us">
+      <h4>Follow us on Instagram</h4>
+      <p><a href="https://www.instagram.com/jundurahman_jr/"><i class="fa fa-instagram"></i> FOLLOW INSTAGRAM</a></p>
+      <h4>Get in touch</h4>
+      <p>Bole Infront of Harmony Hotel, Addis Ababa, Ethiopia.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AJ Cars. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://web.facebook.com"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/jundurahman_jr/#"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/watch?v=SI3R54tHork"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+
+</footer>
+
+<style>
+  .footer {
+    background-color: #252422;
+    color: #ccc5b9;
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section h4 {
+    color: #fffcf2;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 10px 0;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #ccc5b9;
+    transition: color 0.3s;
+  }
+
+  .footer-section ul li a:hover {
+    color: #81CB38;
+  }
+
+  .footer-section .contact-info li {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #403d39;
+    padding-top: 10px;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  .social-icons a {
+    color: #ccc5b9;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #81CB38;
+  }
+</style>

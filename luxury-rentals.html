@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Cars - Quality Rentals and Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #252422;
+            background-color: #fffcf2;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Header Section */
+        .header {
+            width: 100%;
+        }
+        .top-bar {
+            background-color: #ccc5b9;
+            color: #403d39;
+            font-size: 14px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contact-info span {
+            margin-left: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #fffcf2;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            width: 120px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links li {
+            display: inline-block;
+        }
+        .nav-links a {
+            font-weight: bold;
+            font-size: 16px;
+            color: #252422;
+        }
+        .search-icon i {
+            font-size: 18px;
+            cursor: pointer;
+            color: #252422;
+        }
+        /* Hero Section */
+        .hero {
+            background-image: url('https://i.ibb.co/f1csM8K/i7.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #fffcf2;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(37, 36, 34, 0.6);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fffcf2;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ccc5b9;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #81CB38; /* Updated to green */
+            color: #fffcf2;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #403d39;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                display: none;
+            }
+            .navbar {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        /* Rental Section Styling */
+        .rental-section {
+            text-align: center;
+            background-color: #fffcf2;
+            padding: 50px 20px;
+            color: #403d39;
+        }
+        .rental-section h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #252422;
+        }
+        .rental-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .rental-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .rental-card {
+            background-color: #fff;
+            border: 1px solid #ccc5b9;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 300px;
+        }
+        .rental-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .rental-card h3 {
+            margin: 15px 0;
+            font-size: 18px;
+            color: #81CB38; /* Updated to green */
+        }
+        .rental-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Footer Styling */
+        .footer {
+            background-color: #252422;
+            color: #ccc5b9;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Cars</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+<header class="header">
+    <div class="top-bar">
+        <p>Nationwide rental service with 24/7 customer support.</p>
+        <div class="contact-info">
+            <span><i class="fa fa-phone"></i> +251 11 661 0000</span>
+            <span><i class="fa fa-map-marker"></i> Bole Infront of Harmony Hotel.</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://i.ibb.co/7zgF8mm/517402-19749882-3602823-fc903b51-image-removebg-preview.png" alt="AJ Cars Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> <!-- Link to home page -->
+            <li><a href="about.html">About Us</a></li> <!-- Link to about page -->
+            <li><a href="rentals.html">Rentals</a></li> <!-- Link to rentals page -->
+            <li><a href="products.html">Products</a></li> <!-- Link to products page -->
+            <li><a href="contact.html">Contact Us</a></li> <!-- Link to contact page -->
+        </ul>
+        <div class="search-icon">
+            <i class="fa fa-search"></i>
+        </div>
+    </nav>
+</header>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car - AJ Cars</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Rental Section */
+        .rental-section {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .rental-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .rental-container h2 {
+            font-size: 36px;
+            color: #81CB38; /* Green color */
+            margin-bottom: 40px;
+        }
+
+        .car-list {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .car-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .car-item:hover {
+            transform: translateY(-10px);
+        }
+      .car-item img {
+    width: 100%;
+    height: 250px;  /* Set a fixed height for uniformity */
+    object-fit: cover;  /* Ensures the images fill the area without distorting */
+    border-radius: 8px;
+      }
+
+        .car-item .btn {
+            padding: 10px 20px;
+            background-color: #81CB38; /* Green color */
+            color: #fffcf2;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .car-item .btn:hover {
+            background-color: #403d39;
+        }
+
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            .car-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .car-item {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section (Include navigation and other sections as needed) -->
+
+    <!-- Rental Section -->
+    <section class="rental-section">
+        <div class="rental-container">
+            <h2>Our Fleet of Rental Cars</h2>
+            <div class="car-list">
+                <!-- Car 1 -->
+                <div class="car-item">
+                    <img src="https://i.ibb.co/Kb9VsG1/2015-Lamborghini-Huracan-LP610-4-19884965832.jpg" alt="Car 1">
+                    <h3>Lamborghini Huracan</h3>
+                    <p>Luxury sports car with exceptional performance and design. Perfect for special events.</p>
+                    <p><strong>Price:</strong> $500/day</p>
+                    <a href="rent-car.html" class="btn">Rent Now</a>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="car-item">
+                    <img src="https://i.ibb.co/KhcXQb1/R0000251-copy.webp" alt="Car 2">
+                    <h3>BMW X5</h3>
+                    <p>Luxury SUV with all-wheel drive and advanced technology. Ideal for road trips and city driving.</p>
+                    <p><strong>Price:</strong> $350/day</p>
+                    <a href="rent-car.html" class="btn">Rent Now</a>
+                </div>
+
+                <!-- Car 3 -->
+                <div class="car-item">
+                    <img src="https://i.ibb.co/xzMx4g4/2024-mercedes-benz-e-450-front.jpg" alt="Car 3">
+                    <h3>Mercedes-Benz E-Class</h3>
+                    <p>Elegant and comfortable sedan for business trips or leisure. A perfect balance of style and performance.</p>
+                    <p><strong>Price:</strong> $400/day</p>
+                    <a href="rent-car.html" class="btn">Rent Now</a>
+                </div>
+
+                <!-- Car 4 -->
+                <div class="car-item">
+                    <img src="https://i.ibb.co/wK9sChR/k56ttkg8-2020-audi-a7-625x300-10-September-19.webp" alt="Car 4">
+                    <h3>Audi A7</h3>
+                    <p>Sporty sedan with an advanced infotainment system and sleek design. Perfect for long drives.</p>
+                    <p><strong>Price:</strong> $420/day</p>
+                    <a href="rent-car.html" class="btn">Rent Now</a>
+                </div>
+
+                <!-- Car 5 -->
+                <div class="car-item">
+                    <img src="https://i.ibb.co/GFNWwmz/5526d6d2811a848522b6c3d0cc0481e4.jpg" alt="Car 5">
+                    <h3>Porsche 911</h3>
+                    <p>Iconic sports car that combines performance with luxury. Enjoy exhilarating drives in style.</p>
+                    <p><strong>Price:</strong> $600/day</p>
+                    <a href="rent-car.html" class="btn">Rent Now</a>
+                </div>
+
+                <!-- Car 6 -->
+                <div class="car-item">
+                    <img src="https://i.ibb.co/bgrmdMH/01-usnpx-2025fordmustang-angularfront-jms.jpg" alt="Car 6">
+                    <h3>Ford Mustang</h3>
+                    <p>Classic American muscle car with a powerful engine and distinctive design. Great for fun drives.</p>
+                    <p><strong>Price:</strong> $350/day</p>
+                    <a href="rent-car.html" class="btn">Rent Now</a>
+                </div>
+
+                <!-- Car 7 -->
+                <div class="car-item">
+                    <img src="https://i.ibb.co/MGpvmxy/chevrolet-camaro-blue-41.jpg" alt="Car 7">
+                    <h3>Chevrolet Camaro</h3>
+                    <p>Stylish coupe with aggressive styling and performance. Ideal for thrill seekers.</p>
+                    <p><strong>Price:</strong> $375/day</p>
+                    <a href="rent-car.html" class="btn">Rent Now</a>
+                </div>
+
+                <!-- Car 8 -->
+                <div class="car-item">
+                    <img src="https://i.ibb.co/w0FRNmN/RRS-21-MY-SVR-CARBON-EDITION-150720-02.jpg" alt="Car 8">
+                    <h3>Range Rover Sport</h3>
+                    <p>Luxury SUV with off-road capabilities and exceptional comfort. Perfect for all kinds of adventures.</p>
+                    <p><strong>Price:</strong> $450/day</p>
+                    <a href="rent-car.html" class="btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section company-info">
+      <img src="https://i.ibb.co/7zgF8mm/517402-19749882-3602823-fc903b51-image-removebg-preview.png" alt="AJ Cars Logo" class="footer-logo">
+      <p>We are dedicated to providing you with the best car rental experience possible.</p>
+      <ul class="contact-info">
+        <li><i class="fa fa-phone"></i> +251 11 661 0000</li>
+        <li><i class="fa fa-envelope"></i> info@ajcarrent.com</li>
+        <li><i class="fa fa-globe"></i> www.ajcarrent.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-section car-services">
+      <h4>Our Car Rental Services</h4>
+      <ul>
+        <li><a href="#">Sedan Car Rentals</a></li>
+        <li><a href="#">Luxury Car Rentals</a></li>
+        <li><a href="#">SUV Car Rentals</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section additional-services">
+      <h4>Additional Services</h4>
+      <ul>
+        <li><a href="#">AJ Car Rental</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-section follow-us">
+      <h4>Follow us on Instagram</h4>
+      <p><a href="https://www.instagram.com/jundurahman_jr/"><i class="fa fa-instagram"></i> FOLLOW INSTAGRAM</a></p>
+      <h4>Get in touch</h4>
+      <p>Bole Infront of Harmony Hotel, Addis Ababa, Ethiopia.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AJ Cars. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://web.facebook.com"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/jundurahman_jr/#"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/watch?v=SI3R54tHork"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+
+</footer>
+
+<style>
+  .footer {
+    background-color: #252422;
+    color: #ccc5b9;
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section h4 {
+    color: #fffcf2;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 10px 0;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #ccc5b9;
+    transition: color 0.3s;
+  }
+
+  .footer-section ul li a:hover {
+    color: #81CB38;
+  }
+
+  .footer-section .contact-info li {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #403d39;
+    padding-top: 10px;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  .social-icons a {
+    color: #ccc5b9;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #81CB38;
+  }
+</style>

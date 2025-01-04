@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Cars - Quality Rentals and Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #252422;
+            background-color: #fffcf2;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Header Section */
+        .header {
+            width: 100%;
+        }
+        .top-bar {
+            background-color: #ccc5b9;
+            color: #403d39;
+            font-size: 14px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contact-info span {
+            margin-left: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #fffcf2;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            width: 120px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links li {
+            display: inline-block;
+        }
+        .nav-links a {
+            font-weight: bold;
+            font-size: 16px;
+            color: #252422;
+        }
+        .search-icon i {
+            font-size: 18px;
+            cursor: pointer;
+            color: #252422;
+        }
+        /* Hero Section */
+        .hero {
+            background-image: url('https://i.ibb.co/f1csM8K/i7.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #fffcf2;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(37, 36, 34, 0.6);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fffcf2;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ccc5b9;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #81CB38; /* Updated to green */
+            color: #fffcf2;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #403d39;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                display: none;
+            }
+            .navbar {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+        /* Rental Section Styling */
+        .rental-section {
+            text-align: center;
+            background-color: #fffcf2;
+            padding: 50px 20px;
+            color: #403d39;
+        }
+        .rental-section h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #252422;
+        }
+        .rental-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .rental-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .rental-card {
+            background-color: #fff;
+            border: 1px solid #ccc5b9;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 300px;
+        }
+        .rental-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .rental-card h3 {
+            margin: 15px 0;
+            font-size: 18px;
+            color: #81CB38; /* Updated to green */
+        }
+        .rental-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Footer Styling */
+        .footer {
+            background-color: #252422;
+            color: #ccc5b9;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Cars</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+<header class="header">
+    <div class="top-bar">
+        <p>Nationwide rental service with 24/7 customer support.</p>
+        <div class="contact-info">
+            <span><i class="fa fa-phone"></i> +251 11 661 0000</span>
+            <span><i class="fa fa-map-marker"></i> Bole Infront of Harmony Hotel.</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://i.ibb.co/7zgF8mm/517402-19749882-3602823-fc903b51-image-removebg-preview.png" alt="AJ Cars Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> <!-- Link to home page -->
+            <li><a href="about.html">About Us</a></li> <!-- Link to about page -->
+            <li><a href="rentals.html">Rentals</a></li> <!-- Link to rentals page -->
+            <li><a href="products.html">Products</a></li> <!-- Link to products page -->
+            <li><a href="contact.html">Contact Us</a></li> <!-- Link to contact page -->
+        </ul>
+        <div class="search-icon">
+            <i class="fa fa-search"></i>
+        </div>
+    </nav>
+</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Rentals & Quality Car Products</h1>
+            <p>Experience the road like never before with our top-notch cars and accessories.</p>
+            <a href="products.html" class="btn">Explore Now</a>
+        </div>
+    </section>
+</body>
+</html>
+<section class="rental-section">
+  <style>
+    .rental-section {
+      text-align: center;
+      padding: 40px;
+      background-color: #fffcf2;
+    }
+
+    .rental-section h2 {
+      color: #252422;
+    }
+
+    .rental-section p {
+      color: #403d39;
+      margin-bottom: 30px;
+    }
+
+    .rental-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .rental-card {
+      display: block;
+      text-decoration: none;
+      color: #252422;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .rental-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .rental-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .rental-card h3 {
+      margin: 15px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+
+  <h2>Our Car Rental Services</h2>
+  <p>Find The Car You're Looking For</p>
+  <div class="rental-cards">
+    <a href="sedan-rentals.html" class="rental-card">
+      <img src="https://i.ibb.co/1qKtLqW/Best-Sedan-Cars-for-Rent-in-Pakistan-Featured-Image.jpg" alt="Sedan Rentals">
+      <h3>Sedan Rentals</h3>
+    </a>
+    <a href="suv-rentals.html"
+       class="rental-card">
+      <img src="https://i.ibb.co/HxM7M4G/2024-lexus-gx-overtrail-incognito-34.jpg" alt="SUV Rentals">
+      <h3>SUV Rentals</h3>
+    </a>
+    <a href="luxury-rentals.html" class="rental-card">
+      <img src="https://i.ibb.co/XkkrtkX/un84kr4tizma1.jpg" alt="Luxury Rentals">
+      <h3>Luxury Rentals</h3>
+    </a>
+  </div>
+</section>
+
+<section class="services-section">
+  <h2>Explore Our Services</h2>
+  <div class="services">
+    <div class="service-item">
+      <h3>Affordable Car Rentals</h3>
+      <p>Wide selection of cars for any occasion at budget-friendly prices.</p>
+    </div>
+    <div class="service-item">
+      <h3>Luxury Car Rentals</h3>
+      <p>Experience comfort and style with our premium luxury cars.</p>
+    </div>
+    <div class="service-item">
+      <h3>24/7 Customer Support</h3>
+      <p>Our team is always here to assist you whenever you need us.</p>
+    </div>
+  </div>
+</section>
+<style>
+  .services-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fffcf2;
+    color: #403d39;
+  }
+
+  .services-section h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #252422;
+  }
+
+  .services {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .service-item {
+    max-width: 250px;
+    text-align: left;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #81CB38;
+  }
+
+  .service-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #403d39;
+  }
+
+  .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Section</title>
+  <style>
+    .contact-section {
+      padding: 50px 20px;
+      background-color: #fffcf2;
+      text-align: center;
+      color: #252422;
+    }
+
+    .contact-section h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #403d39;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #403d39;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc5b9;
+      border-radius: 5px;
+      font-size: 14px;
+      color: #252422;
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #81CB38;
+      box-shadow: 0 0 3px rgba(129, 203, 56, 0.5);
+    }
+
+    .contact-form .submit-button {
+      background-color: #81CB38;
+      color: #fffcf2;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form .submit-button:hover {
+      background-color: #403d39;
+    }
+
+    .contact-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <section class="contact-section">
+    <h2>Have a question or need assistance?</h2>
+    <div class="contact-container">
+      <div class="contact-form">
+        <form action="https://submit-form.com/yddO5P4DG">
+          <div class="form-group">
+            <label for="first-name">First name</label>
+            <input id="first-name" name="first-name" type="text" placeholder="Enter your first name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last name</label>
+            <input id="last-name" name="last-name" type="text" placeholder="Enter your last name" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" cols="30" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+      <div class="contact-image">
+        <img src="https://i.ibb.co/Tvg4M1p/Luxury-Car-Brands-scaled.jpg" alt="Car Image">
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section company-info">
+      <img src="https://i.ibb.co/7zgF8mm/517402-19749882-3602823-fc903b51-image-removebg-preview.png" alt="AJ Cars Logo" class="footer-logo">
+      <p>We are dedicated to providing you with the best car rental experience possible.</p>
+      <ul class="contact-info">
+        <li><i class="fa fa-phone"></i> +251 11 661 0000</li>
+        <li><i class="fa fa-envelope"></i> info@ajcarrent.com</li>
+        <li><i class="fa fa-globe"></i> www.ajcarrent.com</li>
+      </ul>
+    </div>
+
+   <div class="footer-section car-services">
+      <h4>Our Car Rental Services</h4>
+      <ul>
+        <li><a href="sedan-rentals.html">Sedan Car Rentals</a></li>
+        <li><a href="luxury-rentals.html">Luxury Car Rentals</a></li>
+        <li><a href="suv-rentals.html">SUV Car Rentals</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section additional-services">
+      <h4>Additional Services</h4>
+      <ul>
+        <li><a href="AJ Cars.html">AJ Car Rental</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section follow-us">
+      <h4>Follow us on Instagram</h4>
+      <p><a href="https://www.instagram.com/jundurahman_jr/"><i class="fa fa-instagram"></i> FOLLOW INSTAGRAM</a></p>
+      <h4>Get in touch</h4>
+      <p>Bole Infront of Harmony Hotel, Addis Ababa, Ethiopia.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AJ Cars. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://web.facebook.com"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/jundurahman_jr/#"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/watch?v=SI3R54tHork"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #252422;
+    color: #ccc5b9;
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section h4 {
+    color: #fffcf2;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 10px 0;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #ccc5b9;
+    transition: color 0.3s;
+  }
+
+  .footer-section ul li a:hover {
+    color: #81CB38;
+  }
+
+  .footer-section .contact-info li {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #403d39;
+    padding-top: 10px;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  .social-icons a {
+    color: #ccc5b9;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #81CB38;
+  }
+</style>

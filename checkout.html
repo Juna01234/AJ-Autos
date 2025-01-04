@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AJ Cars</title>
+    <style>
+        /* Basic styling for the checkout page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffcf2;
+            color: #252422;
+            margin: 0;
+            padding: 20px;
+        }
+        .checkout-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-container h1 {
+            color: #81CB38;
+        }
+        .checkout-details {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #81CB38;
+            color: #fffcf2;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #403d39;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <div class="checkout-details">
+            <p><strong>Product:</strong> <span id="product-name"></span></p>
+            <p><strong>Price:</strong> <span id="product-price"></span></p>
+        </div>
+        <button class="btn" onclick="confirmPurchase()">Confirm Purchase</button>
+    </div>
+
+    <script>
+        // Get query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+        const price = urlParams.get('price');
+
+        // Display product details
+        document.getElementById('product-name').textContent = product || 'Unknown Product';
+        document.getElementById('product-price').textContent = price ? `$${price}` : 'N/A';
+
+        function confirmPurchase() {
+            alert('Purchase Confirmed! Thank you for shopping with AJ Cars.');
+        }
+    </script>
+
+</body>
+</html>
